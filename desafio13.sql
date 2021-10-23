@@ -6,5 +6,5 @@ FROM
 			JOIN
 		order_details as od ON p.ProductID = od.ProductID
 WHERE od.Quantity > 80
-GROUP BY Produto
+GROUP BY Produto, Preço
 ORDER BY Produto;
