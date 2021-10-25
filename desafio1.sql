@@ -13,4 +13,5 @@ SELECT
             1
     ) AS 'Status Inclusão'
 FROM
-    hr.countries AS C;
+    hr.countries AS C
+order by C.COUNTRY_NAME ASC;
