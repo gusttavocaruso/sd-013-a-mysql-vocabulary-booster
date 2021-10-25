@@ -10,5 +10,4 @@ WHERE e.EMAIL = email
 INTO quantityJobs;
 RETURN quantityJobs;
 END $$
-
 DELIMITER ;
