@@ -6,6 +6,5 @@ SELECT
         WHEN MAX_SALARY BETWEEN 20001 AND 30000 THEN 'Alto'
         ELSE 'Altíssimo'
     END AS Nível
-FROM
-    jobs
+FROM hr.jobs
 ORDER BY Cargo;
