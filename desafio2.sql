@@ -1,19 +1,11 @@
 SELECT 
     job_title AS 'Cargo',
     CASE
-        WHEN min_salary <= 10000 THEN 'Baixo'
-        WHEN
-            min_salary > 10001
-                AND min_salary < 20000
-        THEN
-            'Médio'
-        WHEN
-            min_salary > 20001
-                AND min_salary < 30000
-        THEN
-            'Alto'
-        ELSE 'Altíssimo'
+        WHEN max_salary <= 10000 THEN 'Baixo'
+        WHEN max_salary BETWEEN 10001 AND 20000 THEN 'Médio'
+        WHEN max_salary BETWEEN 20001 AND 30000 THEN 'Alto'
+        WHEN max_salary > 30001 'Altíssimo'
     END AS 'Nível'
 FROM
-    jobs
+    hr.jobs
 ORDER BY job_title;
