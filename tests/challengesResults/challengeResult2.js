@@ -19,5 +19,5 @@ const challengeResult2 = [
   { 'Cargo': 'Stock Clerk', 'Nível': 'Baixo' },
   { 'Cargo': 'Stock Manager', 'Nível': 'Baixo' },
 ];
-
+// teste
 module.exports = challengeResult2;
