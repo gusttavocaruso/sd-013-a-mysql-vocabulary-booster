@@ -1,9 +1,9 @@
 SELECT
-    c.COUNTRY_NAME AS 'País',
+    C.COUNTRY_NAME AS 'País',
     (
         SELECT
             IF (
-                c.REGION_ID = r.REGION_ID,
+                C.REGION_ID = r.REGION_ID,
                 'incluído',
                 'não incluído'
             )
@@ -13,4 +13,4 @@ SELECT
             1
     ) AS 'Status Inclusão'
 FROM
-    hr.countries AS c;
+    hr.countries AS C;
