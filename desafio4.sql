@@ -1,4 +1,4 @@
-SELECT 
+  SELECT 
     jobs.JOB_TITLE AS 'Cargo',
     ROUND(AVG(employees.SALARY), 2) AS 'Média salarial',
     CASE
@@ -14,5 +14,6 @@ SELECT
 FROM
     hr.jobs jobs,
     hr.employees employees
+WHERE jobs.JOB_ID = employees.JOB_ID
 GROUP BY jobs.JOB_TITLE
-ORDER BY `Média salarial` ASC, JOB_TITLE;
+ORDER BY (`Média salarial`) ASC , JOB_TITLE;
