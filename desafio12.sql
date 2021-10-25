@@ -7,6 +7,6 @@ SELECT CONCAT(hr1.FIRST_NAME, ' ', hr1.LAST_NAME) AS 'Nome completo funcionário
 FROM employees hr1,
   employees hr2
 WHERE hr1.JOB_ID = hr2.JOB_ID
-  AND CONCAT(hr1.FIRST_NAME, ' ', hr1.LAST_NAME) <> CONCAT(hr2.FIRST_NAME, ' ', hr2.LAST_NAME)
+  AND hr1.EMPLOYEE_ID <> hr2.EMPLOYEE_ID
 ORDER BY CONCAT(hr1.FIRST_NAME, ' ', hr1.LAST_NAME) ASC,
   CONCAT(hr2.FIRST_NAME, ' ', hr2.LAST_NAME) ASC;
