@@ -4,7 +4,7 @@ CASE
   WHEN AVG(e.SALARY) BETWEEN 10001 AND 20000 THEN 'Pleno'
   WHEN AVG(e.SALARY) BETWEEN 20001 AND 30000 THEN 'Sênior'
   ELSE 'CEO'
-   END AS 'Senioridade'  
+    END AS 'Senioridade'  
 FROM hr.employees AS e
 INNER JOIN  hr.jobs AS j 
 ON j.JOB_ID = e.JOB_ID
