@@ -26,16 +26,16 @@
 	SELECT
 		JOB_TITLE AS Cargo,
 		CASE
-			WHEN MAX_SALARY = condição_1 THEN valor_1
-			WHEN MAX_SALARY = condição_2 THEN valor_2
-			WHEN MAX_SALARY = condição_3 THEN valor_3
+			WHEN caso_1 THEN valor_1
+			WHEN caso_2 THEN valor_2
+			WHEN caso_3 THEN valor_3
 			ELSE valor_4
 		END AS Nível
 	FROM hr.jobs
 	ORDER BY JOB_TITLE;
 */
 
--- 4. Agora, com as condições e valores extraidos do enunsiado:
+-- 4. Agora, com as condições e valores extraidos do enunciado:
 SELECT
 	JOB_TITLE AS Cargo,
 	CASE
