@@ -1,4 +1,3 @@
-USE hr;
 SELECT 
     country_name AS País,
     IF(region_id = 1,
@@ -6,3 +5,4 @@ SELECT
         'não incluído') AS 'Status Inclusão'
 FROM
     countries;
+    
