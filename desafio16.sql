@@ -4,7 +4,7 @@ CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(100)
 RETURNS INT READS SQL DATA
 BEGIN
 DECLARE empregos INT;
-SELECT COUNT(*)
+SELECT COUNT(jh.employee_id)
 FROM hr.job_history AS jh
 INNER JOIN hr.employees AS e ON jh.job_id = e.job_id
 WHERE e.email = email INTO empregos;
