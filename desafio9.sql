@@ -1,10 +1,10 @@
-/* 9 - Exibe todos as pessoas funcionárias que já realizaram algum pedido, mostrando também seu total de pedidos feitos
+-- 9 - Exibe todos as pessoas funcionárias que já realizaram algum pedido, mostrando também seu total de pedidos feitos
 SELECT 
-    CONCAT(e.FirstName, ' ', e.LastName) AS Nome_completo,
-    COUNT(o.EmployeeID) AS Total_de_pedidos
+    CONCAT(e.FirstName, ' ', e.LastName) AS 'Nome completo',
+    COUNT(*) AS 'Total de pedidos'
 FROM
-    employees AS e
+    w3schools.orders AS o
         INNER JOIN
-    orders AS o ON e.EmployeeID = o.EmployeeID
-GROUP BY  Nome_completo
-ORDER BY Total_de_pedidos ASC;*/
+    w3schools.employees AS e ON e.EmployeeID = o.EmployeeID
+GROUP BY  `Nome completo`
+ORDER BY `Total de pedidos` ASC;
