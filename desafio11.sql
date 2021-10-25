@@ -7,4 +7,5 @@ WHERE t2.Country = t1.Country
 GROUP BY t2.Country
 ) AS 'Número de compatriotas'
 FROM w3schools.customers t1
+HAVING `Número de compatriotas` > 0
 ORDER BY Nome;
