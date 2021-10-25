@@ -9,4 +9,5 @@ GROUP BY P.ProductName, P.Price
 HAVING MAX(OD.Quantity) > 80.00
 ORDER BY  P.ProductName;
 
-/* ajuda do Rafa e do Anderson */
+/* ajuda do Rafa e do Anderson , eu fiz a lógica e o Rafa fez eu perceber que faltava colocar o Price também
+e que sempre que tiver um caracter como ç é melhor usar '' como string para não conflitar .*/
