@@ -17,4 +17,4 @@ FROM
     hr.employees AS e
 WHERE
     e.SALARY >= 5000
-ORDER BY 'Cargo'
+ORDER BY 'Cargo';
