@@ -5,4 +5,3 @@ SELECT
         'não incluído') AS 'Status Inclusão'
 FROM
     countries;
-    

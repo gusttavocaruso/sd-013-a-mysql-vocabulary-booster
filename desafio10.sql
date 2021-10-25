@@ -7,5 +7,3 @@ FROM
     products AS p
         INNER JOIN
     order_details AS od ON p.Productid = od.ProductID;*/
-
-
