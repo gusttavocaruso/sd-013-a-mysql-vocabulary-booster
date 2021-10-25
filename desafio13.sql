@@ -1,10 +1,10 @@
 USE w3schools;
 SELECT 
-	  ProductName AS 'Produto',
-    Price AS 'Preço'
+ProductName AS 'Produto',
+Price AS 'Preço'
 FROM products
 WHERE ProductID IN (
-	  SELECT ProductID
-    FROM order_details
-    WHERE Quantity > 80)
+SELECT ProductID
+FROM order_details
+WHERE Quantity > 80)
 ORDER BY Produto;
