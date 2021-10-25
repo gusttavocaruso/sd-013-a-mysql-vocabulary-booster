@@ -1,5 +1,4 @@
-USE w3schools;
-SELECT Country AS 'País' FROM customers
+SELECT w3schools.Country AS 'País' FROM customers
 UNION
-SELECT Country AS 'País' from suppliers
+SELECT w3schools.Country AS 'País' from suppliers
 LIMIT 5;
