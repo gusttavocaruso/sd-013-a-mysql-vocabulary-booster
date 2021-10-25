@@ -6,7 +6,4 @@ SELECT
     END) AS 'Status Inclusão'
 FROM
     hr.countries AS C
-    ORDER BY COUNTRY_NAME;
-
--- SELECT * FROM hr.countries; -- REGION_ID,COUNTRY_NAME, COUNTRY_ID
--- SELECT * FROM hr.regions
+ORDER BY COUNTRY_NAME
