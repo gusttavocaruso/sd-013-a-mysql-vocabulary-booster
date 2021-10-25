@@ -6,4 +6,5 @@ INNER JOIN w3schools.orders AS o
 ON c.customerid = o.customerid
 INNER JOIN w3schools.shippers AS s
 ON o.shipperid = s.shipperid
+WHERE ShipperName = 'Speedy Express' OR ShipperName = 'United Package'
 ORDER BY contactname, shippername, orderdate;
