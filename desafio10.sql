@@ -5,5 +5,5 @@ ROUND(AVG(od.Quantity)) AS 'Média'
 FROM w3schools.products AS p
 INNER JOIN w3schools.order_details AS od
 ON od.ProductID = p.ProductID
-GROUP BY od.ProductID HAVING `Média` > 20
+GROUP BY od.ProductID HAVING AVG(od.Quantity) > 20
 ORDER BY `Média`, `Produto`;
