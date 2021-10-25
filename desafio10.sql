@@ -3,7 +3,7 @@ SELECT ProductName AS 'Produto',
   SELECT MIN(Quantity)
   FROM w3schools.order_details 
   WHERE order_details.ProductID = w3schools.products.ProductID
-)  AS 'Minima',
+)  AS 'Mínima',
 (
   SELECT MAX(Quantity)
   FROM w3schools.order_details 
