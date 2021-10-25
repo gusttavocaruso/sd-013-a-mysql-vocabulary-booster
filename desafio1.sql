@@ -1,9 +1,9 @@
 SELECT
-	C.COUNTRY_NAME AS 'País',
-    IF(R.REGION_NAME = 'Europe', 'incluído', 'não incluído') AS 'Status Inclusão'
+C.COUNTRY_NAME AS 'País',
+IF(R.REGION_NAME = 'Europe', 'incluído', 'não incluído') AS 'Status Inclusão'
 FROM
-	hr.countries AS C
+hr.countries AS C
 INNER JOIN
-	hr.regions AS R
-    ON R.REGION_ID = C.REGION_ID
+hr.regions AS R
+ON R.REGION_ID = C.REGION_ID
 ORDER BY C.COUNTRY_NAME;
