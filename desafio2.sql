@@ -1,7 +1,7 @@
 SELECT 
     job_title AS 'Cargo',
     CASE
-        WHEN min_salary < 10000 THEN 'Baixo'
+        WHEN min_salary <= 10000 THEN 'Baixo'
         WHEN
             min_salary > 10001
                 AND min_salary < 20000
@@ -15,5 +15,5 @@ SELECT
         ELSE 'Altíssimo'
     END AS 'Nível'
 FROM
-    hr.jobs
+    jobs
 ORDER BY job_title;
