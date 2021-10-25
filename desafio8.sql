@@ -1,5 +1,5 @@
 SELECT 
-    c.customerName AS 'Nome de contato',
+    c.ContactName AS 'Nome de contato',
     s.shipperName AS 'Empresa que fez o envio',
     o.orderDate AS 'Data do pedido'
 FROM
