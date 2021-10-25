@@ -7,4 +7,3 @@ FROM products p
 GROUP BY p.ProductName
 ORDER BY ROUND(AVG(od.Quantity), 2) ASC,
   p.ProductName ASC;
-
