@@ -10,4 +10,4 @@ FROM
     w3schools.shippers AS s ON s.ShipperID = o.ShipperID
 WHERE
     s.ShipperName IN ('Speedy Express' , 'United Package')
-ORDER BY c.ContactName ASC , s.ShipperName ASC;
+ORDER BY c.ContactName ASC , s.ShipperName ASC, o.OrderDate ASC;
