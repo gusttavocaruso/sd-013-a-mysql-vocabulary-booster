@@ -1,8 +1,8 @@
 SELECT job_title AS 'Cargo', ROUND(AVG(salary), 2) AS 'Média Salarial',
 CASE
-WHEN salary <= 5800 THEN 'Júnior'
-WHEN salary <= 7500 THEN 'Pleno'
-WHEN salary <= 10500 THEN 'Sênior'
+WHEN ROUND(AVG(salary), 2) <= 5800.00 THEN 'Júnior'
+WHEN ROUND(AVG(salary), 2) <= 7500.00 THEN 'Pleno'
+WHEN ROUND(AVG(salary), 2) <= 10500.00 THEN 'Sênior'
 ELSE 'CEO'
 END AS "Senioridade"
 FROM hr.employees AS e
