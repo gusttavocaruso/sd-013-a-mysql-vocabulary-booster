@@ -19,6 +19,8 @@
 	ORDER BY (coluna_1) DESC, (coluna_2);
 */
 
+-- 2. Substituindo com as informações extraidas do enunciado:
+
 SELECT 
   CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) AS 'Nome completo',
   J.JOB_TITLE AS 'Cargo',
