@@ -9,4 +9,3 @@ FROM
 WHERE
     MONTH(jh.start_date) IN (01 , 02, 03)
 ORDER BY UCASE(CONCAT(e.first_name, ' ', e.last_name)) ASC , jh.start_date ASC;
-
