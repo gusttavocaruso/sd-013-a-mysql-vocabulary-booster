@@ -10,7 +10,7 @@ BEGIN
   FROM hr.job_history jh
   WHERE jh.EMPLOYEE_ID = (
     SELECT e.EMPLOYEE_ID
-	FROM hr.employees e
+	  FROM hr.employees e
     WHERE e.EMAIL = employeeEmail
   ) INTO result;
   RETURN result;
