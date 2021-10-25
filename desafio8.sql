@@ -4,28 +4,18 @@
 1. Estrutura básica da query:
 
   SELECT 
-    UPPER(coluna_1) AS 'Nome completo',
-    (coluna_2) AS 'Data de início',
-    (coluna_3) AS 'Salário'
+    UPPER(coluna_1) AS 'Nome de contato',
+    (coluna_2) AS 'Empresa que fez o envio',
+    (coluna_3) AS 'Data do pedido'
   FROM
     (tabela_1) AS __
       INNER JOIN
-    (tabela_2) AS __ ON (condição_1)
+    (tabela_2) AS __ ON __
+      INNER JOIN
+    (tabela_3) AS __ ON __
   WHERE
-    (condição_2)
-  ORDER BY `Nome completo`, `Data de início`;
+    (condição_1) OR (condição_2)
+  ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
 */
 
 -- 2. Substituindo com as informações extraidas do enunciado:
-
-SELECT 
-    UPPER(CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME)) AS 'Nome completo',
-    JH.START_DATE AS 'Data de início',
-    E.SALARY AS 'Salário'
-FROM
-    hr.employees AS E
-        INNER JOIN
-    hr.job_history AS JH ON E.EMPLOYEE_ID = JH.EMPLOYEE_ID
-WHERE
-    MONTH(JH.START_DATE) BETWEEN 1 AND 3 -- mêses janeiro, fevereiro ou março
-ORDER BY `Nome completo` , `Data de início`;
