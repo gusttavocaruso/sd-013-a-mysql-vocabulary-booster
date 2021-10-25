@@ -7,3 +7,4 @@ FROM employees e
   INNER JOIN departments d ON d.DEPARTMENT_ID = e.DEPARTMENT_ID
 ORDER BY CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) DESC,
   j.JOB_TITLE ASC;
+  

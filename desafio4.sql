@@ -13,3 +13,4 @@ SELECT j.JOB_TITLE AS 'CARGO',
 FROM hr.jobs j
 ORDER BY 'Médial salarial' ASC,
   JOB_TITLE ASC;
+  
