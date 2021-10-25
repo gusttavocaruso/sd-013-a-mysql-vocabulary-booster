@@ -4,5 +4,4 @@ SELECT
         'incluído',
         'não incluído') AS 'Status Inclusão'
 FROM
-    countries;
-    
+    countries;    
