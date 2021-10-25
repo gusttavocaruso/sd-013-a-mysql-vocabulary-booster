@@ -9,4 +9,6 @@ FROM
     hr.jobs AS j ON e.JOB_ID = j.JOB_ID
         INNER JOIN
     hr.departments AS d ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
+    INNER join
+    hr.job_history as h on e.EMPLOYEE_ID = h.EMPLOYEE_ID
 ORDER BY CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) DESC , j.JOB_TITLE ASC;
