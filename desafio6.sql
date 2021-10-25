@@ -6,5 +6,3 @@ INNER JOIN hr.employees e ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
 INNER JOIN hr.jobs j ON j.JOB_ID = jh.JOB_ID
 INNER JOIN hr.departments d ON d.DEPARTMENT_ID = jh.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC, Cargo;
-
-
