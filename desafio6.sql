@@ -10,4 +10,3 @@ INNER JOIN jobs j ON j.JOB_ID = e.JOB_ID
 ORDER BY CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) DESC,
   j.JOB_TITLE ASC;
   SELECT * FROM job_history;
-
