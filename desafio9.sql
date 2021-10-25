@@ -1,6 +1,6 @@
 SELECT CONCAT(e.FirstName, ' ', e.LastName) AS 'Nome completo',
-  COUNT(e.EmployeeID) AS 'Total de Pedidos'
+  COUNT(o.EmployeeID) AS 'Total de pedidos'
 FROM employees e
   INNER JOIN orders o ON o.EmployeeID = e.EmployeeID
 GROUP BY CONCAT(e.FirstName, ' ', e.LastName)
-ORDER BY COUNT(e.EmployeeID) ASC;
+ORDER BY COUNT(o.EmployeeID) ASC;
