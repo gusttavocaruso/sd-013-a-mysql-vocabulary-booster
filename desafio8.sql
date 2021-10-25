@@ -8,4 +8,4 @@ WHERE sh.ShipperName IN ('Speedy Express', 'United Package')
 ORDER BY c.ContactName ASC,
   sh.ShipperName ASC,
   o.OrderDate ASC;
-  
+
