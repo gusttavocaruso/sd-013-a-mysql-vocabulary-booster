@@ -10,6 +10,6 @@ SELECT
 FROM
     hr.employees AS e
         INNER JOIN
-    hr.jobs AS j ON j.JOB_ID = e.job_id
+    hr.jobs AS j ON e.JOB_ID = j.job_id
 GROUP BY e.JOB_ID
-ORDER BY  ROUND(AVG(e.SALARY), 2) ASC;
+ORDER BY  ROUND(AVG(e.SALARY), 2);
