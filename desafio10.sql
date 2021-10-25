@@ -8,4 +8,5 @@ FROM
         INNER JOIN
     w3schools.order_details AS od ON od.ProductID = prod.ProductID
 GROUP BY Produto
-ORDER BY Média ASC , Produto ASC
+HAVING Média > 20
+ORDER BY Média ASC , Produto ASC;
