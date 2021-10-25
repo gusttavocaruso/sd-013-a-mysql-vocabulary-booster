@@ -1,7 +1,7 @@
 -- 1 - Exiba os países e indicando se cada um deles se encontra ou não na região formada pela Europa
 
 /*
-A estrutura básica da nossa query:
+1. A estrutura básica da nossa query:
 
 	SELECT (coluna 1 AS __, CASE coluna 2 (condição) AS __)
 	FROM (tabela 1) AS __
@@ -11,7 +11,7 @@ A estrutura básica da nossa query:
 */
 
 /*
-Substituindo com as informações extraidas do enunciado:
+2. Substituindo com as informações extraidas do enunciado:
 
 	SELECT
 		C.COUNTRY_NAME AS País,
@@ -22,7 +22,7 @@ Substituindo com as informações extraidas do enunciado:
 	ORDER BY COUNTRY_NAME;
 */
 
--- Por último, especificando a condição do valor da coluna `Status Inclusão`:
+-- 3. Por último, especificando a condição do valor da coluna `Status Inclusão`:
 SELECT
 	C.COUNTRY_NAME AS País,
 	CASE R.REGION_NAME
