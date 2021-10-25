@@ -9,8 +9,7 @@ BEGIN
   SELECT COUNT(jh.EMPLOYEE_ID)
   FROM hr.job_history jh
   WHERE jh.EMPLOYEE_ID = (
-    SELECT e.EMPLOYEE_ID
-	  FROM hr.employees e
+    SELECT e.EMPLOYEE_ID FROM hr.employees e
     WHERE e.EMAIL = employeeEmail
   ) INTO result;
   RETURN result;
