@@ -9,4 +9,4 @@ FROM hr.employees AS e
 INNER JOIN  hr.jobs AS j 
 ON j.JOB_ID = e.JOB_ID
 GROUP BY Cargo
-ORDER BY AVG(e.SALARY), Cargo;
+ORDER BY AVG(e.SALARY), j.JOB_TITLE;
