@@ -9,5 +9,5 @@ ROUND(AVG(e.SALARY), 2) AS 'Média salarial',
   FROM hr.jobs j
   INNER JOIN hr.employees e ON e.JOB_ID = j.JOB_ID
 GROUP BY j.JOB_TITLE
-ORDER BY 'Médial salarial' ASC,
+ORDER BY ROUND(AVG(e.SALARY), 2) ASC,
   JOB_TITLE ASC;
