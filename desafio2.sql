@@ -5,7 +5,7 @@
 
 	SELECT
 		(coluna 1 AS __),
-        (CASE coluna 2 AS __)
+    (CASE coluna 2 AS __)
 	FROM (tabela)
 	ORDER BY (coluna);
 */

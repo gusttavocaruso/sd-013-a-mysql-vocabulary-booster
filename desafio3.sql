@@ -5,7 +5,7 @@
 
 	SELECT
 		JOB_TITLE AS (coluna 1),
-        (MAX_SALARY - MIN_SALARY) AS (coluna 2)
+    (MAX_SALARY - MIN_SALARY) AS (coluna 2)
 	FROM hr.jobs
 	ORDER BY (coluna 2), (coluna 1) ASC;
 */
