@@ -1,8 +1,6 @@
-SELECT ContactName AS 'Nome', Country AS 'País',
-( SELECT COUNT(Country) - 1
-  FROM w3schools.customers
-  WHERE Country = c.Country 
-  HAVING COUNT(Country) > 1
- ) AS 'Número de compatriotas'
+SELECT c.ContactName AS 'Nome', c.Country AS 'País', COUNT(*) AS 'Número de compatriotas'
 FROM w3schools.customers AS c
-ORDER BY ContactName;
+INNER JOIN w3schools.customers AS c2
+ON (c2.Country = c.Country AND c.ContactName != c2.ContactName)
+GROUP BY c.ContactName
+ORDER BY c.ContactName;
