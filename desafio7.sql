@@ -5,4 +5,4 @@ FROM hr.employees AS emp
 INNER JOIN hr.job_history AS jobh
 ON emp.EMPLOYEE_ID = jobh.EMPLOYEE_ID
 WHERE MONTH(START_DATE) IN (01, 02, 03)
-ORDER BY `Nome completo` ASC, 'Data de início' DESC;
+ORDER BY `Nome completo` ASC, 'Data de início' ASC;
