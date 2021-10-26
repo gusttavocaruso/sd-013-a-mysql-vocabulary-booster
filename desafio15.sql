@@ -1,6 +1,6 @@
 DELIMITER $$
 
-create PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100), OUT media DECIMAL)
+create PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100), OUT media REAL)
 
 BEGIN
 SELECT 
@@ -15,6 +15,6 @@ END $$
 
 DELIMITER ;
 
-CALL buscar_media_por_cargo('Programmer', @media);
-SELECT @media;
-
+-- SELECT NULL INTO @media;
+-- CALL buscar_media_por_cargo('Programmer', @media);
+-- SELECT @media;
