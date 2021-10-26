@@ -12,7 +12,7 @@ FROM
         INNER JOIN
     hr.jobs AS ho ON he.job_id = ho.job_id
 GROUP BY ho.job_id
-ORDER BY 'Média salarial' ASC , ho.job_title ASC;
+ORDER BY `Média salarial` ASC , ho.job_title ASC;
 
 -- Este requisito eu resolvi consultando o repositorio do mateus henrique T-13-A : 
 -- https://github.com/tryber/sd-013-a-mysql-vocabulary-booster/blob/matheushtc-mysql-vocabulary-booster/desafio4.sql
