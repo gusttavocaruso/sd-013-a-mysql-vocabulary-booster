@@ -1,4 +1,4 @@
-SELECT ProductName AS 'Produto', 
+SELECT ProductName AS Produto, 
 (
   SELECT MIN(Quantity)
   FROM w3schools.order_details 
@@ -16,4 +16,4 @@ SELECT ProductName AS 'Produto',
 ) AS Média
 FROM w3schools.products
 HAVING Média > 20
-ORDER BY Média;
+ORDER BY Média, Produto;
