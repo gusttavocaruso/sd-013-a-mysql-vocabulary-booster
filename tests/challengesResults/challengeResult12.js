@@ -13857,4 +13857,6 @@ const challengeResult12 = [
   }
 ];
 
+console.log(challengeResult12.length)
+
 module.exports = challengeResult12;
