@@ -12,4 +12,3 @@ WHERE
     e.EMPLOYEE_ID <> t.EMPLOYEE_ID
         AND e.JOB_ID = t.JOB_ID
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2` ASC;
-	
