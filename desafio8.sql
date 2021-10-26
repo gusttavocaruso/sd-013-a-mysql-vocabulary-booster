@@ -10,4 +10,4 @@ FROM
     w3schools.shippers s ON o.shipperid = s.shipperid
 WHERE
     s.shippername IN ('Speedy Express' , 'United Package')
-ORDER BY c.contactname , s.shippername;
+ORDER BY c.contactname , s.shippername, o.orderdate;
