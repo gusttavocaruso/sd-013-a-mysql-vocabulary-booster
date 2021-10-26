@@ -1,6 +1,6 @@
 SELECT 
     job_title AS Cargo,
-    (max_salary - min_salary) AS 'Media Salarial',
+    (max_salary - min_salary) AS 'Média salarial',
     CASE
         WHEN ROUND(max_salary - min_salary, 2) BETWEEN 2000 AND 5800 THEN 'Júnior'
         WHEN ROUND(max_salary - min_salary, 2) BETWEEN 5801 AND 7500 THEN 'Pleno'
@@ -8,4 +8,5 @@ SELECT
         WHEN ROUND(max_salary - min_salary, 2) > 10500 THEN 'CEO'
     END AS Senioridade
 FROM
-    hr.jobs;
+    hr.jobs
+    ORDER BY 'Média salarial' ASC, job_title ASC;
