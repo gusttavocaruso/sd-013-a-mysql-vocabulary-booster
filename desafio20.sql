@@ -11,7 +11,7 @@ FROM job_history AS `jbh`
 INNER JOIN employees AS `emp`
 ON jbh.EMPLOYEE_ID = emp.EMPLOYEE_ID
 INNER JOIN departments AS `dep`
-ON dep.DEPARTMENT_ID = emp.DEPARTMENT_ID
+ON dep.DEPARTMENT_ID = jbh.DEPARTMENT_ID
 INNER JOIN jobs AS `job`
 ON job.JOB_ID = jbh.JOB_ID
 WHERE emp.EMAIL = input_email
