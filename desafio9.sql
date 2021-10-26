@@ -6,4 +6,4 @@ FROM
         INNER JOIN
     w3schools.orders o ON e.EmployeeID = o.EmployeeID
 GROUP BY o.EmployeeID
-ORDER BY `Total de pedidos` DESC;
+ORDER BY `Total de pedidos`;
