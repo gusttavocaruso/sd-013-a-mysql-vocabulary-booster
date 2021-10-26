@@ -10,4 +10,3 @@ FROM hr.employees AS E
 INNER JOIN hr.jobs AS J
 ON E.JOB_ID = J.JOB_ID
 GROUP BY J.JOB_ID;
-
