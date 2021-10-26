@@ -10,4 +10,4 @@ INNER JOIN w3schools.shippers AS s
 ON o.shipperId = s.shipperId
 WHERE s.ShipperName = 'Speedy Express' OR  s.ShipperName = 'United Package'
 
-ORDER BY c.ContactName ASC, o.OrderDate ASC;
+ORDER BY c.ContactName ASC, s.ShipperName ASC, o.OrderDate ASC;
