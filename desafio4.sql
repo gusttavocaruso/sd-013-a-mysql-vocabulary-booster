@@ -64,4 +64,3 @@ FROM
     hr.jobs AS J ON E.JOB_ID = J.JOB_ID
 GROUP BY Cargo
 ORDER BY `Média salarial` , `Cargo`;
-
