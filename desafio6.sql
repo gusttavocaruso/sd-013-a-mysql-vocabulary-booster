@@ -7,6 +7,6 @@ H.START_DATE AS 'Data de início do cargo',(
   WHERE DEPARTMENT_ID = E.DEPARTMENT_ID
 ) AS Departamento
 FROM hr.employees AS E
-LEFT JOIN hr.job_history AS H
+RIGHT JOIN hr.job_history AS H
 ON E.EMPLOYEE_ID = H.EMPLOYEE_ID
 ORDER BY CONCAT(FIRST_NAME, ' ', LAST_NAME);
