@@ -7,9 +7,5 @@ SELECT
         WHEN J.MAX_SALARY > 30000 THEN 'Altíssimo'
     END) AS Nível
 FROM
-    hr.employees AS E
-        INNER JOIN
     hr.jobs AS J
-WHERE
-    J.JOB_ID = E.JOB_ID
 ORDER BY J.JOB_TITLE;
