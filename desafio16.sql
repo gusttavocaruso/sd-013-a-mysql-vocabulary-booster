@@ -16,5 +16,3 @@ RETURN jobs_quantity;
 END $$
 
 DELIMITER ;
-
-
