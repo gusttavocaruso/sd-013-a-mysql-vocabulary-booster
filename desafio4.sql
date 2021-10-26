@@ -15,4 +15,4 @@ SELECT
 FROM
     hr.employees AS e
 GROUP BY Cargo
-ORDER BY `Média salarial`, Cargo
+ORDER BY `Média salarial`, Cargo;

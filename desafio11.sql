@@ -11,4 +11,4 @@ SELECT
 FROM
     w3schools.customers c
 HAVING `Número de compatriotas` != 0
-ORDER BY Nome
+ORDER BY Nome;
