@@ -1,6 +1,6 @@
 DELIMITER $$
 
-create PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100), OUT media REAL)
+create PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100))
 
 BEGIN
 SELECT 
@@ -10,11 +10,7 @@ FROM
         INNER JOIN
     hr.jobs AS j ON e.JOB_ID = j.JOB_ID
 WHERE
-    j.JOB_TITLE = cargo INTO media;
+    j.JOB_TITLE = cargo;
 END $$
 
 DELIMITER ;
-
--- SELECT NULL INTO @media;
--- CALL buscar_media_por_cargo('Programmer', @media);
--- SELECT @media;
