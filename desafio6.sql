@@ -11,4 +11,4 @@ FROM
     hr.jobs ON hr.job_history.JOB_ID = hr.jobs.JOB_ID
         INNER JOIN
     hr.departments ON hr.departments.DEPARTMENT_ID = hr.job_history.DEPARTMENT_ID
-ORDER BY CONCAT(FIRST_NAME, ' ', LAST_NAME) DESC , JOB_TITLE ASC;
+ORDER BY CONCAT(FIRST_NAME, ' ', LAST_NAME) DESC , JOB_TITLE;
