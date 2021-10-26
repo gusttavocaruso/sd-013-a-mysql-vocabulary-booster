@@ -9,7 +9,3 @@ GROUP BY c1.country
 FROM w3schools.customers AS c2
 HAVING 'Número de compatriotas'
 ORDER BY c2.CustomerName;
-
-
-
-
