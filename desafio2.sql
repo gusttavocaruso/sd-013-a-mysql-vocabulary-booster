@@ -2,7 +2,7 @@ SELECT * FROM hr.employees; -- SALARY, JOB_ID
 SELECT * FROM hr.jobs; -- MAX_SALARY, JOB_ID
 
 SELECT 
-    E.SALARY AS Cargo,
+    E.JOB_ID AS Cargo,
     (CASE
         WHEN J.MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Baixo'
         WHEN J.MAX_SALARY BETWEEN 10001 AND 20000 THEN 'Médio'
@@ -15,4 +15,4 @@ FROM
     hr.jobs AS J
 WHERE
     J.JOB_ID = E.JOB_ID
-    ORDER BY J.JOB_ID;
+ORDER BY J.JOB_ID;
