@@ -1,11 +1,12 @@
 SELECT 
-    p.ProductName AS 'Produto',
-    MIN(od.Quantity) AS 'Mínima',
-    MAX(od.Quantity) AS 'Máxima',
-    AVG(od.Quantity) AS 'Média'
+    c.ContactName AS 'Nome',
+    c.Country AS 'País',
+    (SELECT 
+            COUNT(*) - 1
+        FROM
+            w3schools.customers
+        WHERE
+            Country = c.Country) AS 'Número de compatriotas'
 FROM
-    w3schools.order_details AS od
-        INNER JOIN
-    w3schools.products AS p ON od.ProductID = p.ProductID
-GROUP BY ProductName
-ORDER BY AVG(od.Quantity) , p.ProductName
+    w3schools.customers AS c
+ORDER BY c.ContactName ASC;
