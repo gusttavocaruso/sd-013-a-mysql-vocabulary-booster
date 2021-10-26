@@ -9,4 +9,11 @@ SELECT
             Country = c.Country) AS 'Número de compatriotas'
 FROM
     w3schools.customers AS c
-ORDER BY c.ContactName ASC;
+WHERE
+    (SELECT 
+            COUNT(*) - 1
+        FROM
+            w3schools.customers
+        WHERE
+            Country = c.Country) > 0
+ORDER BY c.ContactName ASC
