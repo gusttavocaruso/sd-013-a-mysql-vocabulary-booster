@@ -14,5 +14,6 @@ WHERE
     E.EMAIL = email INTO empregos;
     RETURN empregos;
     END $$
+    
 DELIMITER ;
 
