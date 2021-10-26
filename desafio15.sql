@@ -1,0 +1,14 @@
+USE hr;
+DELIMITER $$
+
+CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(20))
+BEGIN
+  SELECT J.JOB_TITLE, ROUND(AVG(E.SALARY), 2)
+  FROM hr.employees E
+  INNER JOIN hr.jobs J
+  ON E.JOB_ID = J.JOB_ID
+  WHERE J.JOB_TITLE LIKE cargo
+  GROUP BY J.JOB_TITLE;
+END $$
+
+DELIMITER ;
