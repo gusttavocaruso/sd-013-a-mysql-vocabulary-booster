@@ -5,7 +5,7 @@ CREATE TRIGGER orders_insert
 BEFORE INSERT ON orders
 FOR EACH ROW
 BEGIN
-	SET NEW.OrderDate = CURDATE();
+SET NEW.OrderDate = CURDATE();
 END $$
 
 DELIMITER ;
