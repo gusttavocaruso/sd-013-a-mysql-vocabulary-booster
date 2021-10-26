@@ -12,4 +12,3 @@ BEGIN
     WHERE e.EMAIL = email INTO @qtd_jobs;
     RETURN @qtd_jobs;    
 END $$ 
-
