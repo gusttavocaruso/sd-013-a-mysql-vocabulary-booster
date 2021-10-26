@@ -45,6 +45,6 @@ FROM
     w3schools.products AS P
         INNER JOIN
     w3schools.order_details AS OD ON P.ProductID = OD.ProductID
-GROUP BY P.productName
+GROUP BY P.ProductName
 HAVING Média > 20
 ORDER BY Média , Produto;
