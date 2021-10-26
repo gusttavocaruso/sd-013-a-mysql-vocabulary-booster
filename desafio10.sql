@@ -1,5 +1,5 @@
 SELECT
-	p.ProductName as Produto,
+	  p.ProductName as Produto,
     MIN(o.Quantity) as Mínima,
     MAX(o.Quantity) as Máxima,
     ROUND(AVG(o.Quantity),2) as Média
