@@ -4,5 +4,3 @@ FROM hr.countries
 ORDER BY `País`;
 
 -- Codigo baseado nos exemplos do Course, aula 20.1
-
-
