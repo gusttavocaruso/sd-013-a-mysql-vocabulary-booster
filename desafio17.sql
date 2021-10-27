@@ -1,0 +1,11 @@
+DELIMITER $$
+
+CREATE TRIGGER fillDate
+AFTER INSERT ON w3schools.orders
+FOR EACH ROW
+BEGIN
+INSERT INTO w3schools.orders (OrderDate)
+VALUES (NEW.CURRENT_DATE());
+END $$
+
+DELIMITER ;
