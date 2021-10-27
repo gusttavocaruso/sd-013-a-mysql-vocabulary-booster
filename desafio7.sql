@@ -8,4 +8,5 @@ FROM
 WHERE
     month(jhistory.START_DATE) <= 3 and month(jhistory.START_DATE) >= 1
 ORDER BY
-    `Nome completo` ASC;
+    `Nome completo` ASC,
+    `Data de início` ASC;
