@@ -7,3 +7,4 @@ INNER JOIN hr.jobs AS jb ON jb.JOB_ID = ht.JOB_ID
 INNER JOIN hr.departments AS dp ON dp.DEPARTMENT_ID = ht.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC, `Cargo`;
 
+-- base do codigo retirada dos video do Course, dia 20.2
