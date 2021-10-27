@@ -7,4 +7,3 @@ ELSE 'Altíssimo'
 END AS 'Nível'
 FROM hr.jobs AS J
 ORDER BY Cargo;
-
