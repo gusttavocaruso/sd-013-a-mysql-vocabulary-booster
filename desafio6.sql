@@ -4,7 +4,7 @@ H.START_DATE AS 'Data de início do cargo', (
   SELECT DEPARTMENT_NAME AS Departamento
   FROM hr.departments
   WHERE DEPARTMENT_ID = E.DEPARTMENT_ID
-)
+) AS Departamento
 FROM hr.employees AS E
 INNER JOIN hr.job_history AS H
 ON H.EMPLOYEE_ID = E.EMPLOYEE_ID
