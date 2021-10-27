@@ -8,4 +8,3 @@ WHEN MAX_SALARY > 30001 THEN 'Altíssimo'
 END AS 'NÍVEL'
 FROM hr.jobs AS J
 ORDER BY Cargo;
-
