@@ -1,5 +1,3 @@
-SELECT * FROM w3schools.customers;
-
 SELECT T1.ContactName AS Nome,
 T1.Country AS País, (
 SELECT COUNT(Country) FROM w3schools.customers
