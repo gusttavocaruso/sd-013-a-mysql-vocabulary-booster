@@ -1,5 +1,5 @@
-SELECT DISTINCT c.Country
-FROM customers c
-  INNER JOIN suppliers s ON c.Country = s.Country
-ORDER BY Country ASC
+(SELECT Country País FROM w3schools.customers) 
+UNION 
+(SELECT Country FROM w3schools.suppliers)
+ORDER BY País
 LIMIT 5;
