@@ -7,5 +7,9 @@ WHERE T1.Country = Country
 AND T1.ContactName <> ContactName
 ) AS 'Número de compatriotas'
 FROM w3schools.customers as T1
-WHERE T1.ContactName <> 'Zbyszek'
+WHERE (
+SELECT COUNT(Country) FROM w3schools.customers
+WHERE T1.Country = Country
+AND T1.ContactName <> ContactName
+) > 0
 ORDER BY T1.ContactName;
