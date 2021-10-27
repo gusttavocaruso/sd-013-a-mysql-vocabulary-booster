@@ -5,7 +5,8 @@ CREATE TRIGGER update_orderDate
   AFTER INSERT ON orders
   FOR EACH ROW
 BEGIN
-  SET NEW.OrderDate = NOW();
+  INSERT INTO orders(OrderDate)
+  VALUES(NOW());
 END $$
 
 DELIMITER ;
