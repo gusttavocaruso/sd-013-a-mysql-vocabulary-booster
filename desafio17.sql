@@ -4,8 +4,16 @@ CREATE TRIGGER fillDate
 AFTER INSERT ON w3schools.orders
 FOR EACH ROW
 BEGIN
-INSERT INTO w3schools.orders (OrderDate)
-VALUES (NEW.CURRENT_DATE());
+UPDATE w3schools.orders
+SET
+    OrderDate = NEW.CURRENT_DATE()
+WHERE
+    (SELECT
+            OrderID
+        FROM
+            w3schools.orders
+        ORDER BY OrderID DESC
+        LIMIT 1);
 END $$
 
 DELIMITER ;
